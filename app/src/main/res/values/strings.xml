@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pasay City App</string>
+    <string name="city_name">Pasay City App</string>
+    <string name="restaurants_category">Restaurants</string>
+    <string name="historical_landmarks">Landmarks</string>
+    <string name="leisure_category">Leisure Spots</string>
+    <string name="recommendation">Recommendations</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.baguiocityapp.Dash_Fragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dash" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoryOneFragment"
+            app:destination="@id/firstcategoryfragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoryThreeFragment"
+            app:destination="@id/categoryThreeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_secondcategoryfragment"
+            app:destination="@id/secondcategoryfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstcategoryfragment"
+        android:name="com.example.baguiocityapp.firstcategoryfragment"
+        android:label="fragment_category_one"
+        tools:layout="@layout/fragment_firstcategory" >
+        <action
+            android:id="@+id/action_categoryOneFragment_to_detailsFragment"
+            app:destination="@+id/firstdeets_Fragment" />
+        <action
+            android:id="@+id/action_categoryOneFragment_to_firstdeets_Fragment"
+            app:destination="@id/firstdeets_Fragment" />
+        <action
+            android:id="@+id/action_categoryOneFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondcategoryfragment"
+        android:name="com.example.baguiocityapp.SecondCategoryFragment"
+        android:label="secondcategoryfragment"
+        tools:layout="@layout/fragment_secondcategory" >
+        <action
+            android:id="@+id/action_categoryTwoFragment_to_twoDetailsFragment"
+            app:destination="@+id/seconddeets_Fragment" />
+        <action
+            android:id="@+id/action_categoryTwoFragment_to_seconddeets_Fragment"
+            app:destination="@id/seconddeets_Fragment" />
+        <action
+            android:id="@+id/action_categoryTwoFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryThreeFragment"
+        android:name="com.example.baguiocityapp.thirdcategoryfragment"
+        android:label="thirdcategoryfragment"
+        tools:layout="@layout/fragment_thirddeets" >
+        <action
+            android:id="@+id/action_categoryThreeFragment_to_thirddeets_Fragment"
+            app:destination="@id/thirddeets_Fragment" />
+        <action
+            android:id="@+id/action_categoryThreeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstdeets_Fragment"
+        android:name="com.example.baguiocityapp.firstdeets_Fragment"
+        android:label="firstdeets_Fragment" >
+        <action
+            android:id="@+id/action_firstdeets_Fragment_to_categoryOneFragment"
+            app:destination="@+id/firstcategoryfragment" />
+        <action
+            android:id="@+id/action_firstdeets_Fragment_to_firstcategoryfragment"
+            app:destination="@id/firstcategoryfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seconddeets_Fragment"
+        android:name="com.example.baguiocityapp.seconddeets_Fragment"
+        android:label="seconddeets_Fragment" >
+        <action
+            android:id="@+id/action_seconddeets_Fragment_to_categoryTwoFragment"
+            app:destination="@+id/secondcategoryfragment" />
+        <action
+            android:id="@+id/action_seconddeets_Fragment_to_secondcategoryfragment"
+            app:destination="@id/secondcategoryfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirddeets_Fragment"
+        android:name="com.example.baguiocityapp.thirddeets_Fragment"
+        android:label="thirddeets_Fragment" >
+        <action
+            android:id="@+id/action_thirddeets_Fragment_to_categoryThreeFragment"
+            app:destination="@id/categoryThreeFragment" />
+    </fragment>
+</navigation>
